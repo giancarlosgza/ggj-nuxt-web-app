@@ -53,8 +53,10 @@
           <div class="col-md-12 text-center">
             <img src="@/assets/images/icons/epic-item-spring-water.png"
                  class="img-fluid img-animated" alt="Spring Water Icon">
+            <p class="overline">Global Game Jam</p>
             <h2 class="font-press-start">DEVELOPED IN
-              <span class="text-gradient secondary">GAME MAKER</span></h2>
+              <span class="text-gradient secondary">GAMEMAKER</span>
+            </h2>
           </div>
         </div>
       </div>
