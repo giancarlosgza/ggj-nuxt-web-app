@@ -20,7 +20,9 @@
             <div class="card card-outline mb-3">
               <div class="card-body d-flex">
                 <img src="@/assets/images/icons/pixel-arrow.png"
-                     class="img-fluid img-left me-2" alt="Pixel Arrow icon by Icons8">
+                     class="img-fluid img-left me-2"
+                     title="Pixel Arrow icon by Icons8"
+                     alt="Pixel Arrow icon by Icons8">
                 <p class="subtitle-1 align-self-center mb-0">Move to left</p>
               </div>
             </div>
@@ -28,7 +30,9 @@
             <div class="card card-outline mb-3">
               <div class="card-body d-flex">
                 <img src="@/assets/images/icons/pixel-arrow.png"
-                     class="img-fluid img-top me-2" alt="Pixel Arrow icon by Icons8">
+                     class="img-fluid img-top me-2"
+                     title="Pixel Arrow icon by Icons8"
+                     alt="Pixel Arrow icon by Icons8">
                 <p class="subtitle-1 align-self-center mb-0">Move to top</p>
               </div>
             </div>
@@ -36,7 +40,9 @@
             <div class="card card-outline mb-3">
               <div class="card-body d-flex">
                 <img src="@/assets/images/icons/pixel-arrow.png"
-                     class="img-fluid img-right me-2" alt="Pixel Arrow icon by Icons8">
+                     class="img-fluid img-right me-2"
+                     title="Pixel Arrow icon by Icons8"
+                     alt="Pixel Arrow icon by Icons8">
                 <p class="subtitle-1 align-self-center mb-0">Move to right</p>
               </div>
             </div>
@@ -44,7 +50,9 @@
             <div class="card card-outline mb-3">
               <div class="card-body d-flex">
                 <img src="@/assets/images/icons/pixel-arrow.png"
-                     class="img-fluid img-bottom me-2" alt="Pixel Arrow icon by Icons8">
+                     class="img-fluid img-bottom me-2"
+                     title="Pixel Arrow icon by Icons8"
+                     alt="Pixel Arrow icon by Icons8">
                 <p class="subtitle-1 align-self-center mb-0">Move to bottom</p>
               </div>
             </div>

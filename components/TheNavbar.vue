@@ -23,9 +23,9 @@
               </NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink to="/play"
+              <NuxtLink to="/team"
                         class="nav-link">
-                Rooms
+                Team
               </NuxtLink>
             </li>
           </ul>

@@ -59,16 +59,20 @@
 
 .img-right {
   transform: rotateZ(315deg);
+  @extend .img-logo;
 }
 
 .img-left {
   transform: rotateZ(135deg);
+  @extend .img-logo;
 }
 
 .img-top {
   transform: rotateZ(225deg);
+  @extend .img-logo;
 }
 
 .img-bottom {
   transform: rotateZ(45deg);
+  @extend .img-logo;
 }
