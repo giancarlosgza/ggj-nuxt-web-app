@@ -11,17 +11,31 @@
   }
 
   &.section-hero {
-    padding: $space-3 0;
+    padding: calc(#{$space-3} * 3) 0;
     background: rgba(var(--theme-primary-rgba), 20%);
     background-size: cover;
-    border-bottom: 5px solid var(--theme-primary);
+    //border-bottom: 5px solid var(--theme-primary);
+    clip-path: polygon(50% 0%, 100% 0, 100% 80%, 0 100%, 0 0);
+
+    .btn-cta {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+
+      &:hover {
+        letter-spacing: 5px;
+      }
+    }
 
     &.bg-custom {
       background-color: map-get($theme-colors, color-amber);
     }
+  }
 
-    &.sc-sm {
-      padding: calc(#{$space-1} * 5) 0 $space-3 0;
+  &.sc-sm {
+    padding: calc(#{$space-1} * 5) 0 $space-3 0;
+
+    &.sc-secondary {
+      background: rgba(var(--theme-secondary-rgba), 30%);
     }
   }
 

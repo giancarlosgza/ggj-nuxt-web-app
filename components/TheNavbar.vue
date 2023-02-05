@@ -19,11 +19,11 @@
             <li class="nav-item">
               <NuxtLink to="/"
                         class="nav-link" aria-current="page">
-                Dashboard
+                Home
               </NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink to="/components"
+              <NuxtLink to="/play"
                         class="nav-link">
                 Rooms
               </NuxtLink>
@@ -31,25 +31,10 @@
           </ul>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                  Username
-                </button>
-                <ul class="dropdown-menu">
-                  <li>
-                    <button class="dropdown-item">Action</button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item">Another action</button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item">Something else here</button>
-                  </li>
-                </ul>
-              </div>
+              <NuxtLink to="/play"
+                        class="btn btn-primary">
+                PLAY NOW
+              </NuxtLink>
             </li>
           </ul>
         </div>
