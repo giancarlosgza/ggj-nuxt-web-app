@@ -1,8 +1,8 @@
 .section {
   padding: calc($space-1 * 5) 0;
 
-  &.section-one {
-    background-color: map-get($theme-colors, color-black);
+  &.sc-header {
+    background: rgba(var(--theme-primary-rgba), 20%);
     color: $white;
 
     h3 {

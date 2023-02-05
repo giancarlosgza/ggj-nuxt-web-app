@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ceab6f7-b716-462a-abe8-06dfea129534" name="Changes" comment="" />
+    <list default="true" id="3ceab6f7-b716-462a-abe8-06dfea129534" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/_sections.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/_sections.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/layout/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/layout/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/play.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/play.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,9 +32,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/giancarlosgza/Dev/GameMaker/ggj-nuxt-web-app/assets",
+    "last_opened_file_path": "D:/www/ThirstyRoots/ggj-nuxt-web-app",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "ts.external.directory.path": "D:\\Program Files\\JetBrains\\WebStorm 2020.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -44,6 +49,18 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,6 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675559319385</updated>
       <workItem from="1675559322133" duration="15092000" />
+      <workItem from="1675621621926" duration="1475000" />
     </task>
     <servers />
   </component>

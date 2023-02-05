@@ -6,6 +6,22 @@
   font-family: $font-jakarta-sans;
   font-size: 14px;
 
+  &.form-game {
+    border: calc(#{$form-border} * 3) solid var(--theme-on-primary);
+
+    &:hover {
+      background-color: var(--theme-surface-1dp);
+      color: var(--theme-on-primary);
+      border: calc(#{$form-border} * 3) solid var(--theme-primary-600);
+    }
+
+    &:focus {
+      background-color: var(--theme-surface-1dp);
+      color: var(--theme-on-primary);
+      border: calc(#{$form-border} * 3) solid var(--theme-primary-700);
+    }
+  }
+
   &:hover {
     background-color: var(--theme-surface-1dp);
     color: var(--theme-on-primary);
