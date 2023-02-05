@@ -63,7 +63,7 @@
   }
 }
 
-@mixin step1( $width, $color ) {
+@mixin border-retro( $width, $color ) {
   box-shadow: $width 0 $color,
   -$width 0 $color,
   0 (-$width) $color,

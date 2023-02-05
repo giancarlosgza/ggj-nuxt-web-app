@@ -32,7 +32,10 @@
           <ul class="navbar-nav ms-auto">
             <li v-if="$route.name === 'play'"
                 class="nav-item">
-              <button class="btn btn-default me-3">
+              <button class="btn btn-default me-3"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#tutorialModal">
                 How to play
               </button>
             </li>
@@ -46,6 +49,8 @@
         </div>
       </div>
     </nav>
+
+    <TutorialModal/>
   </div>
 </template>
 

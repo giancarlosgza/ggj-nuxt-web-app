@@ -2,7 +2,6 @@
 
 .btn {
   @include m.btn-body;
-  @include m.step1( 6px, var(--theme-primary-400) );
   /*height: 36px;*/
 
   @include m.btn-states;
@@ -11,6 +10,7 @@
     background-color: var(--theme-primary-700) !important;
     color: var(--theme-on-primary-inverse) !important;
     border: none !important;
+    @include m.border-retro(6px, var(--theme-primary-400));
 
     &:hover {
       background-color: var(--theme-primary-400) !important;
@@ -28,27 +28,6 @@
       color: var(--theme-on-primary-inverse) !important;
       opacity: 0.5;
     }
-
-    &.is-plate {
-      &::before {
-        opacity: 1;
-        visibility: visible;
-        transition: $transition-cubic-bezier;
-        content: 'money';
-        font-family: "Material Icons Outlined", sans-serif;
-        font-size: 18px;
-        vertical-align: middle;
-      }
-
-      &:hover {
-        &::before {
-          opacity: 1;
-          visibility: visible;
-          content: 'place';
-          color: var(--theme-secondary-300);
-        }
-      }
-    }
   }
 
   &.btn-secondary {
@@ -56,6 +35,7 @@
     color: var(--theme-on-primary);
     border: 1px solid var(--theme-primary-800) !important;
     box-shadow: $shadow-0dp;
+    @include m.border-retro(6px, var(--theme-on-primary));
 
     &:hover {
       background-color: var(--theme-primary-600);

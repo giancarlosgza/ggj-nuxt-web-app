@@ -56,3 +56,19 @@
 .img-animated {
   animation: imageMoveLoop 3s ease-in-out infinite;
 }
+
+.img-right {
+  transform: rotateZ(315deg);
+}
+
+.img-left {
+  transform: rotateZ(135deg);
+}
+
+.img-top {
+  transform: rotateZ(225deg);
+}
+
+.img-bottom {
+  transform: rotateZ(45deg);
+}

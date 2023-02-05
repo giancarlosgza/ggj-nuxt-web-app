@@ -65,7 +65,7 @@
 
   &.card-outline {
     box-shadow: none !important;
-    border: $card-border solid var(--theme-surface-outline);
+    border: calc(#{$card-border} * 3) solid var(--theme-on-primary);
 
     &.is-dashboard {
       border-radius: $border-radius-8;

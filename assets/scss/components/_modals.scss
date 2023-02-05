@@ -16,29 +16,22 @@ $modal-fade-transform: scale(.8);
     }
   }
 
-  .is-custom {
-    width: 90vw;
-    max-width: none;
-    height: 90%;
-    margin: 1.75rem auto;
-  }
-
   .modal-header {
     background: var(--theme-modal);
-    border-bottom: 1px solid var(--theme-surface-outline);
-    border-top-left-radius: $border-radius-12;
-    border-top-right-radius: $border-radius-12;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: $roots-modals-border-radius;
+    border-top-right-radius: $roots-modals-border-radius;
 
     .modal-title {
       font-weight: 700;
-      font-family: $font-jakarta-sans;
+      font-family: $font-press-start;
       font-size: 20px;
     }
   }
 
   .modal-content {
     background-color: var(--theme-modal);
-    border-radius: $border-radius-12;
+    border-radius: $roots-modals-border-radius;
     box-shadow: $shadow-xl;
     border: var(--theme-surface);
   }
@@ -56,9 +49,9 @@ $modal-fade-transform: scale(.8);
 
   .modal-footer {
     background: var(--theme-modal);
-    border-top: 1px solid var(--theme-surface-outline) !important;
-    border-bottom-left-radius: $border-radius-12;
-    border-bottom-right-radius: $border-radius-12;
+    border-top: 1px solid transparent !important;
+    border-bottom-left-radius: $roots-modals-border-radius;
+    border-bottom-right-radius: $roots-modals-border-radius;
 
     &.no-border {
       border-top: none !important;
@@ -74,11 +67,11 @@ $modal-fade-transform: scale(.8);
   }
 
   &.offcanvas-end {
-    border-radius: $border-radius-6 $border-radius-0 $border-radius-0 $border-radius-6;
+    border-radius: $roots-modals-border-radius $border-radius-0 $border-radius-0 $roots-modals-border-radius;
   }
 
   &.offcanvas-bottom {
-    border-radius: $border-radius-12 $border-radius-12 $border-radius-0 $border-radius-0;
+    border-radius: $roots-modals-border-radius $roots-modals-border-radius $border-radius-0 $border-radius-0;
     height: 50vh;
   }
 }
