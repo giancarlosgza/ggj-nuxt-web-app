@@ -4,7 +4,7 @@
          class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <GameCanvas/>
+          <GameCanvas :player-name="playerName"/>
         </div>
       </div>
     </div>
@@ -36,22 +36,20 @@
   </div>
 </template>
 
-<script setup lang="ts">
-useHead({
-  title: 'Play Thirsty Roots',
-  meta: [
-    {name: 'description', content: 'Thirsty Roots: The Game'}
-  ]
-})
-
-let playerName = ''
-const form = {
-  selectedName: ''
+<script>
+export default {
+  data() {
+    return {
+      form: {
+        selectedName: ''
+      },
+      playerName: ''
+    }
+  },
+  methods: {
+    onSubmit() {
+      this.playerName = this.form.selectedName
+    }
+  }
 }
-
-function onSubmit() {
-  playerName = form.selectedName
-  console.log(playerName)
-}
-
 </script>

@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ceab6f7-b716-462a-abe8-06dfea129534" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/team.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/components/_images.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/_images.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/TheNavbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/TheNavbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/TutorialModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/TutorialModal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/GameCanvas.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/GameCanvas.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/play.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/play.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675559319385</updated>
       <workItem from="1675559322133" duration="15092000" />
-      <workItem from="1675621621926" duration="5259000" />
+      <workItem from="1675621621926" duration="6121000" />
     </task>
     <servers />
   </component>
