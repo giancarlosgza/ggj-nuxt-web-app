@@ -3,6 +3,7 @@ import {defineNuxtConfig} from 'nuxt/config'
 
 export default defineNuxtConfig({
     app: {
+        pageTransition: {name: 'page', mode: 'out-in'},
         // Global page headers
         head: {
             title: 'Nuxt 3 GameMaker',
