@@ -38,6 +38,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: 'Play Now!'
+    }
+  },
   data() {
     return {
       form: {

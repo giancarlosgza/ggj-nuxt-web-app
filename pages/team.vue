@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-4 text-center">
-              <h1 class="font-press-start mb-1">Team</h1>
+            <h1 class="font-press-start mb-1">Team</h1>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
                    width="85" height="85"
                    class="img-fluid" alt="Mimic Icon">
               <h2>Alejandro Avila</h2>
-              <p class="subtitle-1 text-muted mb-0">Items Gameplay</p>
+              <p class="subtitle-1 text-muted mb-0">Items Gameplay Designer</p>
             </div>
           </div>
         </div>
