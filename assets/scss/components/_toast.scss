@@ -1,0 +1,72 @@
+.toast-alert {
+  position: fixed;
+  top: 5rem;
+  right: 2rem;
+  width: 10rem;
+  min-width: 18rem;
+  height: 3rem;
+  min-height: 5rem;
+  cursor: pointer;
+  background: linear-gradient(to right, #f8fff9, #ffffff);
+  box-shadow: $shadow-lg;
+  border-radius: $border-radius-6;
+  border-left: 5px solid var(--theme-success);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // default hidden
+  transition: $transition-cubic-bezier;
+  transform: translateX(5rem);
+  opacity: 0;
+  visibility: hidden;
+
+  &.is-show {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .toast-alert-body {
+    padding: $space-1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .toast-icon {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      margin-right: .7rem;
+
+      i {
+        font-size: 30px;
+        color: var(--theme-success);
+      }
+    }
+
+    .toast-title {
+      font-family: $font-poppins;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--theme-on-primary);
+      margin-bottom: 0;
+    }
+
+    .toast-subtitle {
+      font-family: $font-poppins;
+      font-size: 14px;
+      color: var(--theme-muted);
+      margin-bottom: 0;
+    }
+  }
+
+  .toast-loader {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgba(var(--theme-primary-rgba), 30%);
+    transition: $transition-cubic-bezier;
+  }
+}

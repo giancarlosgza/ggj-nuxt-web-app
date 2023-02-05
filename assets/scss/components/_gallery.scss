@@ -1,0 +1,24 @@
+.gallery {
+  border: 1px solid var(--theme-surface-outline);
+  padding: .5rem;
+  display: flex;
+  overflow-x: scroll;
+  //scroll-padding: 0 50%;
+  scroll-snap-type: x proximity;
+
+  .gallery-item {
+    scroll-snap-align: center;
+    display: inline-block;
+    margin-right: $space-3;
+    padding: $space-1;
+    box-shadow: $shadow-sm;
+    border-radius: $border-radius-6;
+    background-color: var(--theme-modal);
+
+    .img-fluid {
+      height: 550px;
+      width: 1048px;
+      max-width: 1048px;
+    }
+  }
+}

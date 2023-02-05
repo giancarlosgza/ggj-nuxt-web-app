@@ -1,0 +1,111 @@
+:root {
+  // Primary colors
+  --theme-background: #f5f5f5;
+  --theme-on-primary: #000000;
+  --theme-on-primary-inverse: #ffffff;
+  // RGBA colors
+  @each $color, $value in $primary-colors {
+    --#{$variable-prefix}#{$color}: #{hexToRGB($value)};
+  }
+  // Variants colors
+  --theme-muted: #52595f;
+  --theme-muted-100: #52595f;
+  --theme-success: #008838;
+  --theme-success-contrast: #005c26;
+  --theme-warning: #ffab00;
+  --theme-warning-contrast: #834300;
+  --theme-danger: #de2839;
+  --theme-danger-contrast: #a10300;
+  --theme-danger-800: #d12033;
+  --theme-danger-900: #c20d26;
+  --theme-default: #f5f8fa;
+  --theme-default-active: #dadce0;
+  --theme-disabled: #e9ecef;
+  --theme-item-disabled: #9aa0a6;
+  --theme-item-range: #f8f8fa;
+  --theme-table-hover: #00000003;
+  // Surfaces colors
+  --theme-sidebar: #ffffff;
+  --theme-surface: #F8F8F8;
+  --theme-surface-outline: #dadce0;
+  --theme-field-surface-outline: #dadce0;
+  --theme-surface-1dp: #ffffff;
+  --theme-navbar: #f5f5f5;
+  --theme-modal: #ffffff;
+  --theme-datepicker: #ffffff;
+  --theme-footer: #f5f8fa;
+  // Image filters
+  --theme-img-logo: none;
+  --theme-img-logo-inverse: brightness(0) invert(1);
+  --checkbox-selector: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z" fill="rgba(255,255,255,1)"/></svg>');
+  --switch-selector: url('data:image/svg+xml;base64,PCEtLSBSZXBsYWNlIHRoZSBjb250ZW50cyBvZiB0aGlzIGVkaXRvciB3aXRoIHlvdXIgU1ZHIGNvZGUgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImZpbGw6IHJnYmEoMCwgMCwgMCwgMSk7dHJhbnNmb3JtOiA7bXNGaWx0ZXI6OyI+PHBhdGggZD0iTTEyIDJDNi40ODYgMiAyIDYuNDg2IDIgMTJzNC40ODYgMTAgMTAgMTAgMTAtNC40ODYgMTAtMTBTMTcuNTE0IDIgMTIgMnoiPjwvcGF0aD48L3N2Zz4=');
+  --frosted-glass-bg: rgba(255, 255, 255, 0.50);
+  --frosted-glass-backdrop-filter: blur(30px) saturate(100%) contrast(45%) brightness(130%);
+  // Animations
+  --animation-index: 0.5s;
+
+  @each $color, $value in $primaries {
+    --#{$variable-prefix}#{$color}: #{$value};
+  }
+
+  @each $color, $value in $secondaries {
+    --#{$variable-prefix}#{$color}: #{$value};
+  }
+
+  @each $color, $value in $accents {
+    --#{$variable-prefix}#{$color}: #{$value};
+  }
+}
+
+.dark-mode {
+  // Primary colors
+  --theme-background: #101010;
+  --theme-on-primary: #ffffff;
+  --theme-on-primary-inverse: #000000;
+  // Variants colors
+  --theme-muted: #acb4ba;
+  --theme-muted-100: #b8c1c7;
+  --theme-success: #8fdf9e;
+  --theme-success-contrast: #00cc54;
+  --theme-warning: #fef697;
+  --theme-warning-contrast: #ffa649;
+  --theme-danger: #fbcad2;
+  --theme-danger-contrast: #ff8f8d;
+  --theme-danger-800: #f49ba1;
+  --theme-danger-900: #ec737c;
+  --theme-default: #272727;
+  --theme-default-active: #323232;
+  --theme-disabled: #939393;
+  --theme-item-disabled: #9aa0a6;
+  --theme-item-range: #474748;
+  --theme-table-hover: #ffffff0f;
+  // Surfaces colors
+  --theme-sidebar: #272727;
+  --theme-surface: #313131;
+  --theme-surface-outline: #323232;
+  --theme-field-surface-outline: #484848;
+  --theme-surface-1dp: #262626;
+  --theme-navbar: #121212;
+  --theme-modal: #313131;
+  --theme-datepicker: #404040;
+  --theme-footer: #272727;
+  // Image filters
+  --theme-img-logo: brightness(0) invert(1);
+  --theme-img-logo-inverse: none;
+  --checkbox-selector: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z" fill="rgba(0,0,0,1)"/></svg>');
+  --switch-selector: url('data:image/svg+xml;base64,PCEtLSBSZXBsYWNlIHRoZSBjb250ZW50cyBvZiB0aGlzIGVkaXRvciB3aXRoIHlvdXIgU1ZHIGNvZGUgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImZpbGw6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMSk7dHJhbnNmb3JtOiA7bXNGaWx0ZXI6OyI+PHBhdGggZD0iTTEyIDJDNi40ODYgMiAyIDYuNDg2IDIgMTJzNC40ODYgMTAgMTAgMTAgMTAtNC40ODYgMTAtMTBTMTcuNTE0IDIgMTIgMnoiPjwvcGF0aD48L3N2Zz4=');
+  --frosted-glass-bg: rgba(0, 0, 0, 0.50);
+  --frosted-glass-backdrop-filter: blur(20px) saturate(150%) contrast(100%) brightness(100%);
+
+  @each $color, $value in $dark-primaries {
+    --#{$variable-prefix}#{$color}: #{$value};
+  }
+
+  @each $color, $value in $dark-secondaries {
+    --#{$variable-prefix}#{$color}: #{$value};
+  }
+
+  @each $color, $value in $dark-accents {
+    --#{$variable-prefix}#{$color}: #{$value};
+  }
+}

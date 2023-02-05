@@ -1,0 +1,90 @@
+@use "~vue2-datepicker/scss/index.scss";
+
+$namespace: 'mx';
+$default-color: var(--theme-datepicker);
+$primary-color: var(--theme-secondary-500);
+
+.mx-datepicker-popup {
+  position: absolute;
+  box-shadow: $shadow-md !important;
+  z-index: 9999 !important;
+  border-radius: $border-radius-8;
+}
+
+.mx-datepicker-main {
+  font-family: $font-jakarta-sans !important;
+  color: var(--theme-secondary-800) !important;
+  background-color: var(--theme-datepicker) !important;
+  border: var(--theme-surface-outline) !important;
+
+  .mx-time {
+    background-color: var(--theme-datepicker) !important;
+
+    .mx-time-header {
+      border-bottom: 1px solid rgba(var(--theme-primary-rgba), 80%) !important;
+    }
+
+    .mx-time-content {
+      .mx-time-columns {
+        .mx-time-column {
+          &:last-child {
+            border-left: 1px solid rgba(var(--theme-primary-rgba), 80%);
+          }
+        }
+      }
+    }
+
+    .mx-time-item {
+      &.active {
+        background-color: var(--theme-on-primary) !important;
+        color: var(--theme-on-primary-inverse) !important;
+      }
+    }
+  }
+}
+
+.mx-calendar-content {
+  .cell {
+    border-radius: $border-radius-50;
+    font-weight: 500;
+
+    &.active {
+      color: var(--theme-on-primary-inverse) !important;
+      background-color: var(--theme-primary) !important;
+      font-weight: 700;
+      border-radius: $border-radius-50;
+    }
+
+    &.disabled {
+      color: rgba(var(--theme-primary-rgba), 50%) !important;
+      background-color: rgba(var(--theme-primary-rgba), 0%) !important;
+      font-weight: 400;
+
+      &:before {
+        content: 'horizontal_rule';
+        font-family: "Material Icons Outlined", sans-serif;
+        font-size: 18px;
+        color: rgba(var(--theme-primary-rgba), 50%);
+        position: absolute;
+        padding-top: 0;
+        padding-left: 0;
+        transform: translate(-9px, -4px);
+      }
+    }
+
+    &:hover {
+      color: var(--theme-on-primary) !important;
+      background-color: var(--theme-modal) !important;
+      border: 1px solid var(--theme-primary-400) !important;
+    }
+  }
+}
+
+.mx-btn {
+  color: var(--theme-primary) !important;
+  font-weight: 700 !important;
+}
+
+.mx-datepicker svg {
+  fill: var(--theme-muted) !important;
+}

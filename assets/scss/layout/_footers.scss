@@ -1,0 +1,13 @@
+footer {
+  background-color: var(--theme-footer);
+  padding-top: $space-3;
+  padding-bottom: $space-3;
+
+  a {
+    font-weight: $fw-500;
+
+    &.subtitle-1, &.subtitle-2 {
+      font-weight: $fw-500;
+    }
+  }
+}

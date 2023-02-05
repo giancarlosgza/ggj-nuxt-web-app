@@ -27,7 +27,7 @@ export default defineNuxtConfig({
         // Bootstrap module
         'bootstrap/dist/css/bootstrap.min.css',
         // SCSS file in the project
-        // '~/assets/scss/main.scss'
+        '~/assets/scss/main.scss'
     ],
 
     // Plugins to run before rendering page

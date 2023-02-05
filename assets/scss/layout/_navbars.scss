@@ -1,0 +1,209 @@
+@use "sass:math";
+
+.navbar {
+  background-color: var(--theme-navbar) !important;
+  font-weight: 500;
+  font-size: 14px;
+  transition: $transition-cubic-bezier;
+  box-shadow: $shadow-0dp;
+  z-index: 999;
+
+  //&::after {
+  //  content: '';
+  //  position: absolute;
+  //  bottom: 0;
+  //  width: 100%;
+  //  height: .5rem;
+  //  background: var(--theme-c4-gradient);
+  //}
+
+  .navbar-brand {
+    color: var(--theme-on-primary);
+    font-family: map-get($c4-overline, font-family);
+    font-size: map-get($c4-overline, font-size);
+    font-weight: $fw-700;
+    text-transform: uppercase;
+
+    img {
+      //filter: var(--theme-img-logo-inverse);
+      width: 85px;
+      height: auto;
+      max-width: 100px;
+      max-height: 85px;
+    }
+
+    &:hover {
+      color: var(--theme-primary-500);
+    }
+
+    &:focus,
+    &:active {
+      color: var(--theme-primary-600);
+    }
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    color: var(--theme-on-primary);
+    font-family: $font-jakarta-sans;
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+
+  .navbar a {
+    color: var(--theme-on-primary);
+
+    &:hover {
+      // background-color: #bebebe1c;
+      border-radius: $border-radius-25;
+    }
+
+    &:focus,
+    &:active {
+      color: var(--theme-primary) !important;
+    }
+  }
+
+  .navbar-logo {
+    filter: var(--theme-img-logo);
+  }
+
+  .navbar-nav .nav-link {
+    color: var(--theme-on-primary);
+    border-bottom: 3px solid transparent;
+
+    &.nuxt-link-exact-active {
+      font-weight: 500;
+      color: var(--theme-primary-700);
+      border-radius: $border-radius-0;
+      border-bottom: 3px solid var(--theme-primary-700);
+    }
+
+    &.router-link-active {
+      font-weight: 500;
+      color: var(--theme-primary-700);
+      border-radius: $border-radius-0;
+      border-bottom: 3px solid var(--theme-primary-700);
+    }
+
+    &:hover {
+      color: var(--theme-muted);
+      border-bottom: 3px solid rgba(var(--theme-muted-rgba), 50%);
+    }
+  }
+
+  &.nav-scrolling {
+    border-bottom: 1px solid var(--theme-surface-outline);
+  }
+}
+
+// NAV MENU
+.nav-menu-button {
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: math.div($space-1, 2);
+  z-index: 999;
+  background-color: var(--theme-modal);
+  color: var(--theme-on-primary);
+  box-shadow: $shadow-lg;
+  border-radius: $border-radius-8;
+  overflow-y: auto;
+  max-height: calc(100vh - (#{$space-2} * 10));
+  height: auto;
+  max-width: 20rem;
+
+  animation-name: fadeIn;
+  transform-origin: center top;
+  will-change: opacity, transform;
+
+  -webkit-animation-duration: calc(var(--animation-index) / 2);
+  animation-duration: calc(var(--animation-index) / 2);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  &.nav-menu-active {
+    display: block;
+  }
+
+  .nav-menu-header {
+    padding: $space-1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    p {
+      color: var(--theme-muted-100);
+    }
+
+    .avatar {
+      inset: 0;
+      margin-bottom: $space-1;
+      border-radius: $border-radius-50;
+      box-shadow: $shadow-md;
+      background-size: cover;
+      object-fit: contain;
+    }
+  }
+
+  .nav-menu-body {
+    padding: $space-1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .nav-menu-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      margin: math.div($space-1, 8) 0;
+      padding: math.div($space-1, 3);
+      min-width: calc(#{$space-3} * 5);
+      width: calc(#{$space-3} * 5);
+      font-family: $font-jakarta-sans;
+      transition: $transition-cubic-bezier;
+
+      p {
+        margin-bottom: 0;
+      }
+
+      & .icon-wrap {
+        box-shadow: $shadow-0dp;
+        border: 1px solid var(--theme-default-active);
+        margin-right: math.div($space-1, 2);
+        padding: math.div($space-1, 2);
+        border-radius: $border-radius-4;
+        color: var(--theme-primary);
+        transition: $transition-cubic-bezier;
+      }
+
+      &:hover {
+        background: scale-color($primary, $alpha: -85%);
+        padding: math.div($space-1, 3);
+        border-radius: $border-radius-8;
+
+        & p {
+          font-weight: 500;
+          color: var(--theme-primary-800);
+        }
+
+      }
+    }
+  }
+
+  .nav-menu-footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: $space-1;
+    border-top: 1px solid var(--theme-surface-outline);
+  }
+}

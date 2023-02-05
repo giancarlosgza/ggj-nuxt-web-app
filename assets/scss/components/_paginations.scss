@@ -1,0 +1,31 @@
+.page-item {
+  .page-link {
+    font-size: .8rem;
+    background-color: var(--theme-surface);
+    border: var(--theme-surface);
+    color: var(--theme-on-primary);
+
+    &:hover {
+      color: var(--theme-on-primary-inverse);
+      background-color: var(--theme-primary-600);
+      border-color: var(--theme-primary-600);
+    }
+  }
+
+  &.active {
+    .page-link {
+      z-index: 3;
+      color: var(--theme-on-primary-inverse);
+      background-color: var(--theme-primary-800);
+      border-color: var(--theme-primary-800);
+    }
+  }
+
+  &.disabled {
+    .page-link {
+      background-color: var(--theme-disabled);
+      border: var(--theme-disabled);
+      color: var(--theme-muted);
+    }
+  }
+}

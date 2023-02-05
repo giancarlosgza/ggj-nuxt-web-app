@@ -1,0 +1,30 @@
+.progress {
+  .progress-bar {
+    color: var(--theme-on-primary-inverse);
+    background-color: var(--theme-success);
+    font-weight: 700;
+    font-family: $font-jakarta-sans;
+  }
+}
+
+.placeholder-container {
+  position: relative;
+  height: 150px;
+  width: 100%;
+  background-color: var(--theme-surface);
+  z-index: 44;
+  overflow: hidden;
+  border-radius: $border-radius-8;
+
+  .placeholder-loader {
+    position: absolute;
+    left: -45%;
+    height: 100%;
+    width: 45%;
+    background-image: linear-gradient(to left, rgba(251, 251, 251, .05), rgba(251, 251, 251, .3), rgba(251, 251, 251, .6), rgba(251, 251, 251, .3), rgba(251, 251, 251, .05));
+    background-image: -moz-linear-gradient(to left, rgba(251, 251, 251, .05), rgba(251, 251, 251, .3), rgba(251, 251, 251, .6), rgba(251, 251, 251, .3), rgba(251, 251, 251, .05));
+    background-image: -webkit-linear-gradient(to left, rgba(251, 251, 251, .05), rgba(251, 251, 251, .3), rgba(251, 251, 251, .6), rgba(251, 251, 251, .3), rgba(251, 251, 251, .05));
+    animation: placeholderLoading 1s infinite;
+    z-index: 45;
+  }
+}

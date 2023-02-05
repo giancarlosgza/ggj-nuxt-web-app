@@ -1,0 +1,14 @@
+.sheet {
+  position: absolute;
+  top: 4rem;
+  bottom: 2rem;
+  right: 3rem;
+  width: 18rem;
+  margin: auto;
+  z-index: 99;
+  border-radius: $border-radius-4;
+  transition: $transition-cubic-bezier;
+  background: var(--theme-navbar);
+  padding: 1rem;
+  box-shadow: $shadow-md;
+}

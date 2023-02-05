@@ -1,0 +1,23 @@
+.list-group-item {
+  background-color: transparent;
+  color: var(--theme-on-primary);
+  border: $card-border solid var(--theme-surface-outline);
+  margin-bottom: 0;
+  transition: $transition-cubic-bezier;
+
+  label {
+    font-size: 14px;
+  }
+
+  &.active {
+    z-index: 2;
+    color: var(--theme-on-primary-inverse);
+    background-color: var(--theme-primary-500);
+    border-color: var(--theme-primary-500);
+  }
+
+  &.disabled {
+    background-color: var(--theme-surface);
+    color: var(--theme-muted);
+  }
+}

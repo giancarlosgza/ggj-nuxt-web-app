@@ -1,0 +1,63 @@
+@use "sass:math";
+@use "sass:map";
+@use "variables" as v;
+
+@mixin text-color($color) {
+  color: $color !important;
+}
+
+@mixin text-gradient($deg, $colors...) {
+  $deg: 45deg !default;
+
+  background-image: -webkit-linear-gradient($deg, $colors);
+  background-image: -moz-linear-gradient($deg, $colors);
+  background-image: -o-linear-gradient($deg, $colors);
+  background-image: linear-gradient($deg, $colors);
+}
+
+/// Helper to styles a button
+/// @author C4 DEV
+@mixin btn-body() {
+  padding: 8px 1rem;
+  margin: 4px;
+  font-family: map-get(v.$c4-button, font-family);
+  font-weight: map-get(v.$c4-button, font-weight);
+  font-size: map-get(v.$c4-button, font-size);
+  letter-spacing: map-get(v.$c4-button, letter-spacing);
+  border-radius: v.$c4-buttons-border-radius;
+  border-style: none;
+  text-transform: inherit;
+  box-shadow: v.$shadow-sm;
+  transition: v.$transition-cubic-bezier;
+  /*display: inline-flex;*/
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin btn-states() {
+  &:hover {
+    box-shadow: v.$shadow-md;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: v.$shadow-lg !important;
+    @extend .ripple
+  }
+}
+
+@mixin ripple-color($color) {
+  background-image: radial-gradient(circle, $color 10%, transparent 10.01%);
+}
+
+/// Helper to use media queries with breakpoints
+/// @author C4 DEV
+/// @param {Breakpoints} $breakpoints
+@mixin media-query($key) {
+  $size: map.get(v.$breakpoints, $key);
+
+  @media only screen and (max-width: $size) {
+    @content
+  }
+}

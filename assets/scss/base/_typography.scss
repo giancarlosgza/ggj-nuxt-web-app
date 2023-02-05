@@ -1,0 +1,255 @@
+@use "../abstracts/mixins" as m;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;800&display=swap');
+
+// TYPE SYSTEM
+body {
+  font-family: map-get($c4-body1, font-family);
+  font-weight: map-get($c4-body1, font-weight);
+  font-size: map-get($c4-body1, font-size);
+  letter-spacing: map-get($c4-body1, letter-spacing);
+  background: var(--theme-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  color: var(--theme-on-primary);
+}
+
+h1 {
+  font-family: map-get($c4-headline1, font-family);
+  font-weight: map-get($c4-headline1, font-weight);
+  letter-spacing: map-get($c4-headline1, letter-spacing);
+}
+
+h2 {
+  font-family: map-get($c4-headline2, font-family);
+  font-weight: map-get($c4-headline2, font-weight);
+  letter-spacing: map-get($c4-headline2, letter-spacing);
+}
+
+h3 {
+  font-family: map-get($c4-headline3, font-family);
+  font-weight: map-get($c4-headline3, font-weight);
+  letter-spacing: map-get($c4-headline3, letter-spacing);
+}
+
+h4 {
+  font-family: map-get($c4-headline4, font-family);
+  font-weight: map-get($c4-headline4, font-weight);
+  letter-spacing: map-get($c4-headline4, letter-spacing);
+}
+
+h5 {
+  font-family: map-get($c4-headline5, font-family);
+  font-weight: map-get($c4-headline5, font-weight);
+  letter-spacing: map-get($c4-headline5, letter-spacing);
+}
+
+h6 {
+  font-family: map-get($c4-headline6, font-family);
+  font-weight: map-get($c4-headline6, font-weight);
+  letter-spacing: map-get($c4-headline6, letter-spacing);
+}
+
+.subtitle-1 {
+  font-family: map-get($c4-subtitle1, font-family);
+  font-weight: map-get($c4-subtitle1, font-weight);
+  font-size: map-get($c4-subtitle1, font-size);
+  letter-spacing: map-get($c4-subtitle1, letter-spacing);
+}
+
+.subtitle-2 {
+  font-family: map-get($c4-subtitle2, font-family);
+  font-weight: map-get($c4-subtitle2, font-weight);
+  font-size: map-get($c4-subtitle2, font-size);
+  letter-spacing: map-get($c4-subtitle2, letter-spacing);
+}
+
+.body-1 {
+  font-family: map-get($c4-body1, font-family);
+  font-weight: map-get($c4-body1, font-weight);
+  font-size: map-get($c4-body1, font-size);
+  letter-spacing: map-get($c4-body1, letter-spacing);
+}
+
+.body-2 {
+  font-family: map-get($c4-body2, font-family);
+  font-weight: map-get($c4-body2, font-weight);
+  font-size: map-get($c4-body2, font-size);
+  letter-spacing: map-get($c4-body2, letter-spacing);
+}
+
+.caption {
+  font-family: map-get($c4-caption, font-family);
+  font-weight: map-get($c4-caption, font-weight);
+  font-size: map-get($c4-caption, font-size);
+  letter-spacing: map-get($c4-caption, letter-spacing);
+}
+
+.overline {
+  font-family: map-get($c4-overline, font-family);
+  font-weight: map-get($c4-overline, font-weight);
+  font-size: map-get($c4-overline, font-size);
+  letter-spacing: map-get($c4-overline, letter-spacing);
+  text-transform: uppercase;
+
+  &.small {
+    font-size: 12px;
+    text-transform: capitalize;
+  }
+
+  &:has(~ h1) {
+    color: var(--theme-primary);
+    margin-bottom: .3rem;
+  }
+}
+
+p,
+a {
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+a {
+  color: var(--theme-primary);
+  text-decoration: none !important;
+
+  &:hover {
+    color: var(--theme-primary-hover);
+    text-decoration: none;
+  }
+
+  &:active,
+  &:focus {
+    color: var(--theme-primary-active);
+    text-decoration: none;
+  }
+}
+
+label {
+  font-family: map-get($c4-label, font-family);
+  font-weight: map-get($c4-label, font-weight);
+  font-size: map-get($c4-label, font-size);
+  letter-spacing: map-get($c4-label, letter-spacing);
+  text-transform: none;
+  margin-bottom: .25rem;
+  color: var(--theme-on-primary);
+}
+
+small {
+  color: var(--theme-muted);
+}
+
+.text-primary {
+  @include m.text-color(var(--theme-primary));
+}
+
+.text-secondary {
+  @include m.text-color(var(--theme-secondary-600));
+}
+
+.text-muted {
+  @include m.text-color(var(--theme-muted));
+}
+
+.text-success {
+  @include m.text-color(var(--theme-success));
+}
+
+.text-warning {
+  @include m.text-color(var(--theme-warning-contrast));
+}
+
+.text-danger {
+  @include m.text-color(var(--theme-danger));
+}
+
+.text-invalid {
+  @include m.text-color(var(--theme-danger-contrast));
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+.text-body {
+  @include m.text-color(var(--theme-on-primary));
+}
+
+.text-body-inverse {
+  @include m.text-color(var(--theme-on-primary-inverse));
+}
+
+.text-gradient {
+  color: #7319fa;
+  //background-image: -webkit-linear-gradient(45deg, #7319fa, #ff33b4, #ff7e29);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  @include m.text-gradient(45deg, #7319fa, #ff33b4, #ff7e29);
+
+  &.orange {
+    @include m.text-gradient(45deg, #ffba52, #ff7366);
+  }
+
+  &.grey {
+    @include m.text-gradient(45deg, #4d4c4c, #403f3f);
+  }
+
+  &.gold {
+    @include m.text-gradient(45deg, #d6c79a, #edd9a1);
+  }
+}
+
+.font-dm-sans {
+  font-family: $font-jakarta-sans !important;
+}
+
+// OTHER SIZES
+.mdc-18 {
+  font-size: 18px !important;
+}
+
+.mdc-28 {
+  font-size: 28px !important;
+}
+
+.mdc-38 {
+  font-size: 38px !important;
+}
+
+.mdc-48 {
+  font-size: 48px;
+}
+
+.mdc-58 {
+  font-size: 58px;
+}
+
+.mdc-68 {
+  font-size: 68px;
+}
+
+.mdc-78 {
+  font-size: 78px;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+::-moz-selection {
+  background: rgba(var(--theme-primary-rgba), 0.5);
+}
+
+::selection {
+  background: rgba(var(--theme-primary-rgba), 0.5);
+}

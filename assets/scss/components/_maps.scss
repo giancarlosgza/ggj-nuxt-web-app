@@ -1,0 +1,141 @@
+// MAPS STYLES
+#map {
+  width: 100%;
+  height: 100vh;
+}
+
+.mapboxgl-ctrl-geocoder {
+  margin: 10px 10px 0 !important;
+}
+
+.mapboxgl-popup {
+  width: 300px;
+  max-width: 300px;
+  min-width: 300px;
+  z-index: 99;
+
+  .mapboxgl-popup-content {
+    background-color: var(--theme-modal);
+    border-radius: $border-radius-4;
+    box-shadow: $shadow-lg;
+    font-family: $font-jakarta-sans;
+
+    .mapboxgl-popup-close-button {
+      color: var(--theme-on-primary);
+      font-size: 30px;
+
+      &:hover {
+        color: rgba(var(--theme-primary-rgba), 95%);
+      }
+    }
+  }
+
+  &.mapboxgl-popup-anchor-top {
+    .mapboxgl-popup-tip {
+      border-bottom-color: var(--theme-modal) !important;
+    }
+  }
+
+  &.mapboxgl-popup-anchor-bottom {
+    .mapboxgl-popup-tip {
+      border-top-color: var(--theme-modal) !important;
+    }
+  }
+
+  &.mapboxgl-popup-anchor-left {
+    .mapboxgl-popup-tip {
+      border-right-color: var(--theme-modal) !important;
+    }
+  }
+
+  &.mapboxgl-popup-anchor-right {
+    .mapboxgl-popup-tip {
+      border-left-color: var(--theme-modal) !important;
+    }
+  }
+
+}
+
+.mapboxgl-ctrl-geocoder {
+  border-radius: $border-radius-8 !important;
+  background-color: var(--theme-navbar) !important;
+
+  .mapboxgl-ctrl-geocoder--input {
+    background-color: var(--theme-navbar) !important;
+    color: var(--theme-muted) !important;
+    border-radius: $border-radius-8 !important;
+    box-shadow: $shadow-lg;
+
+    &::placeholder {
+      color: var(--theme-muted) !important;
+    }
+  }
+
+  .suggestions {
+    background-color: var(--theme-navbar) !important;
+    color: var(--theme-on-primary) !important;
+
+    li {
+      &.active {
+        a {
+          background-color: var(--theme-modal) !important;
+          color: var(--theme-on-primary) !important;
+        }
+      }
+    }
+
+    li {
+      a {
+        color: var(--theme-muted) !important;
+        font-family: $font-jakarta-sans;
+
+        &:hover {
+          background-color: var(--theme-modal) !important;
+          color: var(--theme-muted) !important;
+        }
+      }
+    }
+  }
+}
+
+.map-server {
+  height: calc(100vh - 64.77px) !important;
+}
+
+.mapboxgl-map {
+  .mapboxgl-ctrl {
+    &.mapboxgl-ctrl-group {
+      background-color: var(--theme-navbar);
+
+      button {
+        span {
+          filter: var(--theme-img-logo);
+        }
+
+        + button {
+          border-top: 1px solid var(--theme-surface-outline);
+        }
+      }
+    }
+  }
+}
+
+//.marker {
+//  background: url('@/assets/img/icons/server.png'), linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)) no-repeat center;
+//  background-size: cover;
+//  width: 35px;
+//  height: 35px;
+//  border-radius: $border-radius-4;
+//  box-shadow: $shadow-md;
+//  cursor: pointer;
+//}
+//
+//.marker-camera {
+//  background: url('@/assets/img/icons/ptz-camera.png'), linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)) no-repeat center;
+//  background-size: cover;
+//  width: 35px;
+//  height: 35px;
+//  border-radius: $border-radius-4;
+//  box-shadow: $shadow-md;
+//  cursor: pointer;
+//}

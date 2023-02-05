@@ -1,0 +1,14 @@
+// RETURNS A MIX COLOR WITH WHITE
+@function tint($color, $percentage) {
+  @return mix(#FFF, $color, $percentage);
+}
+
+// RETURNS A MIX COLOR WITH BLACK
+@function shade($color, $percentage) {
+  @return mix(#000, $color, $percentage);
+}
+
+// RETURNS AN HEXADECIMAL COLOR TO RGB
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex)
+}

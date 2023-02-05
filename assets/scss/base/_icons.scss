@@ -1,0 +1,141 @@
+i.material-icons,
+i.material-icons-outlined {
+  vertical-align: middle;
+  display: inline-flex;
+}
+
+.icon-inverse {
+  transform: rotateY(180deg);
+}
+
+.icon-sortable {
+  font-size: 16px !important;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+
+.icon-wrap {
+  padding: 20px;
+  background-color: var(--theme-background);
+  color: var(--theme-primary-contrast);
+  border-radius: $border-radius-50;
+  box-shadow: $shadow-sm;
+
+  svg path {
+    &:last-child {
+      fill: var(--theme-primary);
+    }
+  }
+
+  &.icon-wrap-sm {
+    padding: 8px;
+    border-radius: $border-radius-6;
+  }
+
+  &.icon-wrap-primary {
+    background-color: rgba(var(--theme-primary-rgba), 10%);
+    color: var(--theme-primary);
+    box-shadow: $shadow-0dp;
+  }
+
+  &.icon-wrap-secondary {
+    background-color: rgba(var(--theme-secondary-rgba), 20%);
+    color: var(--theme-secondary-800);
+    box-shadow: $shadow-0dp;
+  }
+
+  &.icon-wrap-success {
+    background-color: rgba(var(--theme-success-rgba), 10%);
+    color: var(--theme-success);
+    box-shadow: $shadow-0dp;
+  }
+
+  &.icon-wrap-default {
+    background-color: rgba(var(--theme-default-rgba), 20%);
+    color: var(--theme-on-primary);
+    box-shadow: $shadow-0dp;
+  }
+
+  &.icon-wrap-info {
+    background-color: rgba(var(--theme-accent-rgba), 30%);
+    color: var(--theme-accent-500);
+    box-shadow: $shadow-0dp;
+  }
+
+  &.icon-wrap-red {
+    color: map-get($theme-colors, color-red);
+  }
+
+  &.icon-wrap-pink {
+    color: map-get($theme-colors, color-pink);
+  }
+
+  &.icon-wrap-purple {
+    color: map-get($theme-colors, color-purple);
+  }
+
+  &.icon-wrap-deep-purple {
+    color: map-get($theme-colors, color-deep-purple);
+  }
+
+  &.icon-wrap-blue {
+    color: map-get($theme-colors, color-blue);
+  }
+
+  &.icon-wrap-cyan {
+    color: map-get($theme-colors, color-cyan);
+  }
+
+  &.icon-wrap-teal {
+    color: map-get($theme-colors, color-teal);
+  }
+
+  &.icon-wrap-green {
+    color: map-get($theme-colors, color-green);
+  }
+
+  &.icon-wrap-yellow {
+    color: map-get($theme-colors, color-yellow);
+  }
+
+  &.icon-wrap-amber {
+    color: map-get($theme-colors, color-amber);
+  }
+
+  &.icon-wrap-orange {
+    color: map-get($theme-colors, color-orange);
+  }
+}
+
+// menu: &#xe5d2;
+// account_circle: &#xe853;
+// settings: &#xe8b8;
+// add: &#xe145;
+// edit: &#xe3c9;
+// arrow_back: &#xe5c4;
+// apps: &#xe5c3;
+
+// invert_colors: &#xe891;
+// colorize: &#xe3b8;
+// format_color_fill: &#xe23a;
+// blender: &#xefe3;
+// launch: &#xe895;
+// palette: &#xe40a;
+// casino: &#xeb40;
+
+// close: &#xe5cd;
+// favorite_border: &#xe87e;
+// exit_to_app: &#xe879;
+
+// explore: &#xe87a;
+// arrow_forward: &#xea77;
+// login: &#xe5c8;
+// more_horiz: &#xe5d3;
+
+// fiber_manual_record: &#xe061;
+// circle: &#xef4a;
+// favorite: &#xe87d;
+// cached: &#xe86a;
+
+// brightness_5: &#xe3aa;
+// dark_mode: &#xe51c;

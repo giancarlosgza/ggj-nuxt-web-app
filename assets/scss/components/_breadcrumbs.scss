@@ -1,0 +1,28 @@
+.breadcrumb {
+  .breadcrumb-item {
+    font-family: $font-jakarta-sans;
+    align-self: center;
+    letter-spacing: -.5px;
+    line-height: normal;
+
+    a {
+      font-size: 14px;
+      letter-spacing: -.5px;
+      font-weight: 500;
+
+      &:hover {
+        color: rgba(var(--theme-primary-rgba), 90%);
+      }
+    }
+
+    &.active {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--theme-muted);
+    }
+
+    i {
+      margin-bottom: .25rem;
+    }
+  }
+}

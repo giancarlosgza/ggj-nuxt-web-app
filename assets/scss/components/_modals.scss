@@ -1,0 +1,96 @@
+$modal-fade-transform: scale(.8);
+
+.modal {
+  &.show {
+    .modal-dialog {
+      transform: scale(1) !important;
+      opacity: 1 !important;
+    }
+  }
+
+  &.fade {
+    .modal-dialog {
+      transform: scale(0);
+      opacity: 0;
+      transition: transform 0.2s ease-out, opacity 0.2s ease-out
+    }
+  }
+
+  .is-custom {
+    width: 90vw;
+    max-width: none;
+    height: 90%;
+    margin: 1.75rem auto;
+  }
+
+  .modal-header {
+    background: var(--theme-modal);
+    border-bottom: 1px solid var(--theme-surface-outline);
+    border-top-left-radius: $border-radius-12;
+    border-top-right-radius: $border-radius-12;
+
+    .modal-title {
+      font-weight: 700;
+      font-family: $font-jakarta-sans;
+      font-size: 20px;
+    }
+  }
+
+  .modal-content {
+    background-color: var(--theme-modal);
+    border-radius: $border-radius-12;
+    box-shadow: $shadow-xl;
+    border: var(--theme-surface);
+  }
+
+  .modal-body {
+    text-align: left;
+    background: var(--theme-modal);
+
+    .form-control {
+      height: 2.5rem;
+      min-height: 2.5rem;
+      max-height: 2.5rem;
+    }
+  }
+
+  .modal-footer {
+    background: var(--theme-modal);
+    border-top: 1px solid var(--theme-surface-outline) !important;
+    border-bottom-left-radius: $border-radius-12;
+    border-bottom-right-radius: $border-radius-12;
+
+    &.no-border {
+      border-top: none !important;
+    }
+  }
+}
+
+.offcanvas {
+  background-color: var(--theme-modal);
+
+  .offcanvas-body {
+    text-align: left;
+  }
+
+  &.offcanvas-end {
+    border-radius: $border-radius-6 $border-radius-0 $border-radius-0 $border-radius-6;
+  }
+
+  &.offcanvas-bottom {
+    border-radius: $border-radius-12 $border-radius-12 $border-radius-0 $border-radius-0;
+    height: 50vh;
+  }
+}
+
+$swal2-background: var(--theme-modal) !important;
+$swal2-title-color: var(--theme-on-primary) !important;
+$swal2-color: var(--theme-muted) !important;
+$swal2-content-color: var(--theme-on-primary) !important;
+$swal2-border-radius: $border-radius-8 !important;
+$swal2-timer-progress-bar-background: var(--theme-success) !important;
+$swal2-title-font-weight: 500 !important;
+
+.swal2-popup {
+  box-shadow: $shadow-md !important;
+}

@@ -1,0 +1,41 @@
+.animate {
+  animation-duration: var(--animation-index);
+  -webkit-animation-duration: var(--animation-index);
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes placeholderLoading {
+  0% {
+    left: 45%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity ease 0.2s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}

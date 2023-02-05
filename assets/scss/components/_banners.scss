@@ -1,0 +1,53 @@
+.banner {
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  background-color: var(--theme-on-primary);
+  box-shadow: $shadow-lg;
+  z-index: 999;
+  border-bottom: 5px solid rgba(var(--theme-warning-rgba), 80%);
+  transition: $transition-cubic-bezier;
+  animation: bannerVisible .5s;
+  opacity: 1;
+  visibility: visible;
+
+  &.is-hidden {
+    transform: translateY(-2rem);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .banner-body {
+    padding: .5rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-size: 14px;
+      font-family: $font-poppins;
+      color: var(--theme-on-primary-inverse);
+      font-weight: bold;
+      margin-bottom: 0;
+      align-self: center;
+
+      &:before {
+        font-family: "Material Icons", sans-serif;
+        content: 'report_problem';
+        font-size: 25px;
+        vertical-align: middle;
+        margin-right: 10px;
+        font-weight: 500;
+        color: rgba(var(--theme-warning-rgba), 80%);
+      }
+    }
+
+    .btn {
+      margin: 0;
+    }
+  }
+}

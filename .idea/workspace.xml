@@ -27,7 +27,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/giancarlosgza/Dev/GameMaker/ggj-nuxt-web-app/components",
+    "last_opened_file_path": "/Users/giancarlosgza/Dev/GameMaker/ggj-nuxt-web-app/assets",
     "nodejs_package_manager_path": "npm",
     "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
@@ -35,6 +35,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/layouts" />
       <recent name="$PROJECT_DIR$" />
@@ -51,7 +52,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675559319385</updated>
-      <workItem from="1675559322133" duration="885000" />
+      <workItem from="1675559322133" duration="1027000" />
     </task>
     <servers />
   </component>

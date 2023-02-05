@@ -1,0 +1,37 @@
+@use "../abstracts/mixins" as m;
+
+@include m.media-query(768) {
+  .card {
+    &.card-visualizer {
+      height: auto;
+      max-height: calc(100vh - 180px);
+    }
+
+    &.card-outline {
+      &.is-dashboard {
+        margin-bottom: .5rem;
+      }
+    }
+  }
+
+  .analysis-container {
+    .analysis-img-wrap {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+}
+
+@include m.media-query(600) {
+  .card {
+    &.card-visualizer {
+      height: auto;
+      max-height: calc(100vh - 180px);
+    }
+  }
+
+  .analysis-container {
+    .analysis-img-wrap {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

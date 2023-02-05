@@ -1,0 +1,327 @@
+@use "sass:math";
+
+.card {
+  background-color: var(--theme-surface-1dp);
+  color: var(--theme-on-primary);
+  border-radius: $c4-cards-border-radius;
+  border: none;
+  /* 1dp */
+  box-shadow: $shadow-0dp;
+  transition: $transition-cubic-bezier;
+
+  &:hover {
+    /* 2dp */
+    box-shadow: $shadow-sm;
+  }
+
+  .card-header {
+    background-color: var(--theme-surface-1dp);
+    border-bottom: 1px solid transparent;
+    margin-top: .5rem;
+
+    &:is(.border-bottom) {
+      border-bottom: 1px solid var(--theme-field-surface-outline) !important;
+    }
+
+    &:first-child {
+      border-top-left-radius: $c4-cards-border-radius;
+      border-top-right-radius: $c4-cards-border-radius;
+    }
+
+    &:has(.title) {
+      padding-bottom: 0;
+    }
+
+    .title {
+      font-size: (map-get($c4-headline2, font-size) - .6rem);
+    }
+  }
+
+  .card-footer {
+    padding: .75rem 1.25rem;
+    background-color: var(--theme-surface-1dp);
+    border-top: 1px solid rgba(0, 0, 0, .125);
+    border-bottom-left-radius: $c4-cards-border-radius;
+    border-bottom-right-radius: $c4-cards-border-radius;
+
+    &.no-border {
+      border-top: 0 solid rgba(0, 0, 0, .125);
+    }
+
+    &:last-child {
+      border-bottom-left-radius: $c4-cards-border-radius;
+      border-bottom-right-radius: $c4-cards-border-radius;
+    }
+  }
+
+  &.card-no-border {
+    box-shadow: none !important;
+    border: none;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  &.card-outline {
+    box-shadow: none !important;
+    border: $card-border solid var(--theme-surface-outline);
+
+    &.is-dashboard {
+      border-radius: $border-radius-8;
+      border: $card-border solid var(--theme-surface-outline);
+      //border-right: 2px solid var(--theme-surface-outline);
+      margin-bottom: 0;
+
+      .badge-secondary {
+        border-radius: $border-radius-6;
+      }
+    }
+
+    &.is-active {
+      border: $card-border solid var(--theme-primary);
+    }
+
+    &:hover {
+      box-shadow: none;
+
+      &.w-elevation {
+        box-shadow: $shadow-sm !important;
+        border: 1px solid transparent;
+      }
+    }
+  }
+
+  &.is-interactive {
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--theme-modal);
+      box-shadow: $shadow-md !important;
+      transform: translateY(-.3rem);
+    }
+  }
+
+  &:is(.header-hero) {
+    padding: $space-3;
+
+    .overline {
+      color: var(--theme-on-primary);
+    }
+
+    &:is(.header-sidebar) {
+      background-color: #36a9e2;
+      background-image: radial-gradient(at 76% 12%, hsl(155, 94%, 35%) 0px, transparent 50%), radial-gradient(at 27% 95%, hsl(19, 97%, 76%) 0px, transparent 50%), radial-gradient(at 82% 87%, hsl(133, 97%, 62%) 0px, transparent 50%), radial-gradient(at 71% 14%, hsl(219, 77%, 48%) 0px, transparent 50%), radial-gradient(at 75% 99%, hsl(27, 91%, 59%) 0px, transparent 50%), radial-gradient(at 18% 55%, hsl(88, 73%, 37%) 0px, transparent 50%);
+    }
+
+    &:is(.header-buttons) {
+      background-color: #747deb;
+      background-image: radial-gradient(at 37% 3%, hsl(234, 23%, 48%) 0px, transparent 50%), radial-gradient(at 64% 77%, hsl(213, 94%, 56%) 0px, transparent 50%), radial-gradient(at 74% 82%, hsl(233, 46%, 50%) 0px, transparent 50%), radial-gradient(at 36% 97%, hsl(232, 76%, 86%) 0px, transparent 50%), radial-gradient(at 15% 37%, hsl(189, 92%, 37%) 0px, transparent 50%), radial-gradient(at 89% 3%, hsl(121, 72%, 65%) 0px, transparent 50%);
+    }
+
+    &:is(.header-cards) {
+      background-color: #86e5b8;
+      background-image: radial-gradient(at 64% 9%, hsl(211, 91%, 37%) 0px, transparent 50%), radial-gradient(at 82% 81%, hsl(170, 39%, 73%) 0px, transparent 50%), radial-gradient(at 43% 87%, hsl(40, 79%, 61%) 0px, transparent 50%), radial-gradient(at 41% 4%, hsl(354, 26%, 63%) 0px, transparent 50%), radial-gradient(at 96% 37%, hsl(256, 44%, 57%) 0px, transparent 50%), radial-gradient(at 65% 46%, hsl(121, 88%, 67%) 0px, transparent 50%);
+    }
+
+    &:is(.header-typography) {
+      background-color: #a26f1f;
+      background-image: radial-gradient(at 45% 22%, hsl(352, 74%, 78%) 0px, transparent 50%), radial-gradient(at 52% 100%, hsl(350, 98%, 64%) 0px, transparent 50%), radial-gradient(at 75% 27%, hsl(98, 62%, 73%) 0px, transparent 50%), radial-gradient(at 64% 11%, hsl(301, 22%, 24%) 0px, transparent 50%), radial-gradient(at 64% 10%, hsl(76, 83%, 64%) 0px, transparent 50%), radial-gradient(at 97% 66%, hsl(345, 93%, 59%) 0px, transparent 50%)
+    }
+  }
+}
+
+.floating-card {
+  position: fixed;
+  top: 5rem;
+  left: 20rem;
+  width: auto;
+  min-width: 15rem;
+  max-width: 16rem;
+  height: auto;
+  max-height: 25rem;
+  padding: .75rem;
+  z-index: 99;
+  border-radius: $border-radius-12;
+  transition: $transition-cubic-bezier;
+  box-shadow: $shadow-lg;
+  background: var(--theme-modal);
+  overflow-y: auto;
+
+  animation-name: fadeIn;
+  transform-origin: center top;
+  will-change: opacity, transform;
+
+  -webkit-animation-duration: calc(var(--animation-index) / 2);
+  animation-duration: calc(var(--animation-index) / 2);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  label {
+    color: var(--theme-muted);
+  }
+
+  &.is-alerts {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    top: 5rem;
+    left: 8rem;
+    right: unset;
+    min-width: 23rem;
+    max-width: 23rem;
+    height: calc(100vh - 50vh);
+    max-height: calc(100vh - 50vh);
+    overflow: visible;
+    border-radius: $border-radius-0 $border-radius-12 $border-radius-12 $border-radius-0;
+
+    .floating-card-header {
+      margin-top: .5rem;
+      margin-bottom: $space-1;
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        font-weight: 700;
+        font-size: 15px;
+        font-family: $font-jakarta-sans;
+        margin-bottom: 0;
+
+        i {
+          font-size: 12px;
+        }
+
+        &:first-child {
+          color: var(--theme-muted);
+          font-size: 13px;
+          font-weight: 400;
+        }
+      }
+
+      .btn {
+        margin: 0;
+        padding: 4px 6px;
+        align-self: center;
+      }
+    }
+
+    .floating-card-body {
+      overflow-y: auto;
+      max-height: calc(100% - 3rem);
+      flex: 1 1 auto;
+
+      .card {
+        //cursor: pointer
+
+        .card-chat {
+          position: relative;
+          margin-bottom: .1rem;
+
+          &:hover {
+            cursor: text;
+
+            .chat-msg-info {
+              p {
+                display: block;
+              }
+            }
+          }
+
+          &.chat-start {
+            .card {
+              border-radius: $border-radius-12 $border-radius-12 $border-radius-12 $border-radius-0;
+              max-width: 50%;
+            }
+          }
+
+          &.chat-end {
+            .card {
+              border-radius: $border-radius-12 $border-radius-12 $border-radius-0 $border-radius-12;
+              max-width: 50%;
+            }
+          }
+
+          .chat-msg-info {
+            position: relative;
+
+            &.info-start {
+              p {
+                left: calc(16.5rem - 334px);
+                right: unset;
+              }
+            }
+
+            p {
+              display: none;
+              position: absolute;
+              bottom: 23px;
+              right: 0;
+              margin: auto;
+              width: 120px;
+            }
+          }
+        }
+      }
+    }
+
+    .floating-card-footer {
+      display: flex;
+      justify-content: space-between;
+      border-top: $card-border solid var(--theme-surface-outline);
+      padding-top: .3rem;
+
+      form {
+        flex: 1 1 auto;
+      }
+    }
+
+    .floating-card-aside {
+      position: absolute;
+      background-color: var(--theme-modal);
+      left: -7rem;
+      bottom: -.8rem;
+      height: calc(100vh - 50vh + 1px);
+      max-height: calc(100vh - 50vh + 1px);
+      width: 100px;
+      padding: math.div($space-1, 2);
+      border-radius: $border-radius-12 $border-radius-0 $border-radius-0 $border-radius-12;
+      border-right: $card-border solid var(--theme-surface-outline);
+      overflow-y: auto;
+
+      .chat-bubble-wrapper {
+        background-color: var(--theme-modal);
+        border-radius: $border-radius-6;
+        border: 1px solid var(--theme-surface-outline);
+        //box-shadow: $shadow-sm;
+        cursor: pointer;
+        margin-top: math.div($space-1, 2);
+        margin-bottom: math.div($space-1, 2);
+
+        &:hover {
+          background-color: rgba(var(--theme-primary-rgba), 70%);
+        }
+
+        &.is-active {
+          background-color: var(--theme-primary);
+          border: 2px solid var(--theme-success);
+
+          p {
+            color: var(--theme-on-primary-inverse);
+            font-weight: 500;
+          }
+        }
+
+        .chat-bubble {
+          word-break: break-all;
+          word-wrap: break-word;
+          padding: math.div($space-1, 2);
+          max-width: 100px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+}

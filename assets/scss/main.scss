@@ -1,0 +1,38 @@
+@import "abstracts/variables";
+@import "abstracts/functions";
+
+@import "base/animations";
+@import "base/icons";
+@import "base/layout";
+@import "base/tables";
+@import "base/typography";
+
+@import "components/alerts";
+@import "components/badges";
+@import "components/breadcrumbs";
+@import "components/buttons";
+//@import "components/datepickers";
+@import "components/dropdowns";
+@import "components/cards";
+@import "components/images";
+@import "components/lists";
+@import "components/loader";
+@import "components/maps";
+@import "components/modals";
+@import "components/paginations";
+@import "components/popups";
+@import "components/progress";
+@import "components/sections";
+@import "components/sheets";
+@import "components/tabs";
+
+@import "layout/footers";
+@import "layout/forms";
+@import "layout/navbars";
+@import "layout/sidebars";
+
+@import "base/media.queries";
+@import "abstracts/roots";
+
+//@import '~sweetalert2/src/variables';
+//@import '~sweetalert2/src/sweetalert2';
