@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="section section-hero sc-bg-1">
+    <section class="section section-hero sc-bg-2">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
@@ -21,7 +21,7 @@
         <div class="row justify-content-between">
           <div class="col-md-4">
             <img src="@/assets/images/icons/common-item-water-drop.png"
-                 class="img-fluid" alt="Water Drop Icon">
+                 class="img-fluid img-animated" alt="Water Drop Icon">
             <h2 class="font-press-start">PLAY <span class="text-gradient secondary">NOW</span></h2>
             <p class="subtitle-1 text-muted mb-3">
               Join the excitement and become a part of the action with our brand new game! Immerse yourself in a world
@@ -35,7 +35,7 @@
           </div>
           <div class="col-md-4">
             <img src="@/assets/images/icons/common-item-torch.png"
-                 class="img-fluid" alt="Torch Icon">
+                 class="img-fluid img-animated" alt="Torch Icon">
             <h2 class="font-press-start">DARK <span class="text-gradient secondary">MODE</span></h2>
             <p class="subtitle-1 text-muted mb-3">
               Switch from a bright and lively interface to a cool and calm dark mode.
@@ -47,12 +47,12 @@
       </div>
     </section>
 
-    <section class="section sc-sm sc-bg-2">
+    <section class="section sc-sm sc-equal sc-bg-2">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
             <img src="@/assets/images/icons/epic-item-spring-water.png"
-                 class="img-fluid" alt="Water Drop Icon">
+                 class="img-fluid img-animated" alt="Spring Water Icon">
             <h2 class="font-press-start">DEVELOPED IN
               <span class="text-gradient secondary">GAME MAKER</span></h2>
           </div>

@@ -30,6 +30,12 @@
             </li>
           </ul>
           <ul class="navbar-nav ms-auto">
+            <li v-if="$route.name === 'play'"
+                class="nav-item">
+              <button class="btn btn-default me-3">
+                How to play
+              </button>
+            </li>
             <li class="nav-item">
               <NuxtLink to="/play"
                         class="btn btn-primary">
