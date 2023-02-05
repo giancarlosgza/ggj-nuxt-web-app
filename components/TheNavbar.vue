@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg sticky-top">
       <div class="container">
         <NuxtLink to="/"
-                  class="navbar-brand">Thirsty Roots
+                  class="navbar-brand">ThirstyRoots
         </NuxtLink>
         <button class="navbar-toggler"
                 type="button"

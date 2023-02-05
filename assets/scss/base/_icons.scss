@@ -17,8 +17,8 @@ i.material-icons-outlined {
 .icon-wrap {
   padding: 20px;
   background-color: var(--theme-background);
-  color: var(--theme-primary-contrast);
-  border-radius: $border-radius-50;
+  color: var(--theme-on-primary);
+  border-radius: $border-radius-12;
   box-shadow: $shadow-sm;
 
   svg path {

@@ -18,8 +18,8 @@
   //}
 
   .navbar-brand {
-    color: var(--theme-on-primary);
-    font-family: map-get($c4-overline, font-family);
+    color: var(--theme-primary);
+    font-family: $font-press-start;
     font-size: map-get($c4-overline, font-size);
     font-weight: $fw-700;
     text-transform: uppercase;
@@ -81,7 +81,7 @@
     &.router-link-active {
       font-weight: 500;
       color: var(--theme-primary-700);
-      border-radius: $border-radius-12;
+      border-radius: $border-radius-4;
       background: rgba(var(--theme-primary-rgba), 20%);
       position: relative;
 
@@ -90,7 +90,7 @@
         width: 100%;
         height: 3px;
         background: var(--theme-primary-700);
-        border-radius: $border-radius-8;
+        border-radius: $border-radius-4;
         position: absolute;
         bottom: -.6rem;
         left: 0;
@@ -99,7 +99,8 @@
 
     &:hover {
       color: var(--theme-muted);
-      border-bottom: 3px solid rgba(var(--theme-muted-rgba), 50%);
+      border-radius: $border-radius-4;
+      background: rgba(var(--theme-primary-rgba), 20%);
     }
   }
 

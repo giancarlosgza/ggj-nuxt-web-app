@@ -58,8 +58,8 @@ $accents: (
 ) !default;
 
 // DARK MODE VARIABLES
-$dark-primary: #f5f5f5;
-$dark-secondary: #ffc627;
+$dark-primary: #e5d8cd;
+$dark-secondary: #eeebde;
 $dark-accent: #edffff;
 
 $dark-primary-100: scale-color($dark-primary, $lightness: -80%) !default;
@@ -169,6 +169,7 @@ $theme-colors: (
 // Fonts
 $font-jakarta-sans: 'Plus Jakarta Sans', 'Roboto', -apple-system, 'Segoe UI', sans-serif;
 $font-dm-sans: 'DM Sans', -apple-system, 'Segoe UI', sans-serif;
+$font-press-start: 'Press Start 2P', cursive;
 
 // Type scale
 $c4-headline1: (
@@ -242,8 +243,8 @@ $c4-body2: (
 );
 
 $c4-button: (
-        font-family: ("Plus Jakarta Sans", sans-serif),
-        font-weight: 800,
+        font-family: ("Press Start 2P", sans-serif),
+        font-weight: 400,
         font-size: 14px,
         letter-spacing: 1px,
 );
@@ -279,7 +280,7 @@ $border-radius-25: 25px;
 $border-radius-50: 50px;
 
 $c4-forms-border-radius: $border-radius-6;
-$c4-buttons-border-radius: $border-radius-8;
+$c4-buttons-border-radius: $border-radius-0;
 $c4-cards-border-radius: $border-radius-12;
 
 // Space

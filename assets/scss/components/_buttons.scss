@@ -2,6 +2,7 @@
 
 .btn {
   @include m.btn-body;
+  @include m.step1( 6px, var(--theme-primary-400) );
   /*height: 36px;*/
 
   @include m.btn-states;

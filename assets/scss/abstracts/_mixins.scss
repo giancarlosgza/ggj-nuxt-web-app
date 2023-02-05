@@ -38,6 +38,7 @@
 @mixin btn-states() {
   &:hover {
     box-shadow: v.$shadow-md;
+    transform: translateY(.2rem);
   }
 
   &:focus,
@@ -60,4 +61,12 @@
   @media only screen and (max-width: $size) {
     @content
   }
+}
+
+@mixin step1( $width, $color ) {
+  box-shadow: $width 0 $color,
+  -$width 0 $color,
+  0 (-$width) $color,
+  0 $width $color;
+  margin: $width auto;
 }

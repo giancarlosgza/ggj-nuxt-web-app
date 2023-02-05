@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class='subtitle-1 mb-2'>Tema del sistema</p>
+    <!--    <p class='subtitle-1 mb-2'>Tema del sistema</p>-->
     <div class='d-flex'>
       <div v-for='color of colors' :key='color'>
         <input
@@ -13,12 +13,9 @@
             autocomplete='off'
         />
         <label
-            class='btn btn-default-outline is-chip ripple ripple-primary'
+            class='btn btn-default-outline is-chip text-capitalize'
             :for='color'>
-          <span v-if="color === 'system'">Sistema</span>
-          <span v-if="color === 'light'">Claro</span>
-          <span v-if="color === 'dark'">Oscuro</span>
-          <!--          {{ color }}-->
+          {{ color }}
         </label>
       </div>
     </div>
