@@ -18,11 +18,15 @@
 
             <form action=""
                   @submit.prevent='onSubmit'
-                  class="d-flex">
+                  class="">
               <input type="text"
                      v-model="form.selectedName"
                      placeholder="Choose your player name"
-                     class="form-control form-game me-3">
+                     class="form-control form-game mb-3">
+              <input type="text"
+                     v-model="form.selectedRoomId"
+                     placeholder="Type or paste the game room id"
+                     class="form-control form-game mb-3">
               <button class="btn btn-primary"
                       type="submit">Play
               </button>
@@ -46,14 +50,17 @@ export default {
   data() {
     return {
       form: {
-        selectedName: ''
+        selectedName: '',
+        selectedRoomId: ''
       },
-      playerName: ''
+      playerName: '',
+      roomId: ''
     }
   },
   methods: {
     onSubmit() {
       this.playerName = this.form.selectedName
+      this.roomId = this.form.selectedRoomId
     }
   }
 }

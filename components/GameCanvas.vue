@@ -11,12 +11,16 @@ export default {
     playerName: {
       type: String,
       default: null
+    },
+    roomId: {
+      type: String,
+      default: null
     }
   },
   computed: {
     url() {
       if (this.playerName) {
-        return '/game?playerName=' + this.playerName
+        return '/game?playerName=' + this.playerName + '?roomId=' + this.roomId
         console.log(window.location.href)
       }
     }

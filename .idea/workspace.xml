@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ceab6f7-b716-462a-abe8-06dfea129534" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.firebase/hosting.Lm91dHB1dFxwdWJsaWM.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.Lm91dHB1dFxwdWJsaWM.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.Lm91dHB1dFxwdWJsaWM.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/GameCanvas.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/GameCanvas.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/play.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/play.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/team.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/game/html5game/GGJ-2023.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/game/html5game/GGJ-2023.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/game/html5game/GGJ-2023_texture_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/game/html5game/GGJ-2023_texture_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/game/html5game/GGJ-2023_texture_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/game/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/game/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675559319385</updated>
       <workItem from="1675559322133" duration="15092000" />
-      <workItem from="1675621621926" duration="7877000" />
+      <workItem from="1675621621926" duration="12080000" />
     </task>
     <servers />
   </component>
